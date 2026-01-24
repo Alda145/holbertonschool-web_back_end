@@ -3,38 +3,35 @@ export default class HolbertonCourse {
     constructer(name, length, students) {
         if (typeof name !== 'string') {
             throw new Error('Name must be a string');
-        }else {
+        } else {
             this._name = name;
         }
 
         if (typeof length !== 'number') {
             throw new Error('Length must be a number');
-        }else {
-            this._length = length; 
+        } else {
+            this._length = length;
         }
 
         if (!Array.isArray(students)) {
             throw new Error('Students must be a array');
-        }else {
+        } else {
             this._students = students;
         }
-    
-        this._name = name;
-        this._length = length;
-        this._students = students;
+
     }
 
     get name() {
-        return this._name
+        return this._name;
     }
     get length() {
-        return this._length
+        return this._length;
     }
     get students() {
-        return this._students
+        return this._students;
     }
-    
-    set name (name){
+
+    set name(name) {
         if (typeof name !== 'string') {
             throw new Error('Name must be a string');
         } else {
