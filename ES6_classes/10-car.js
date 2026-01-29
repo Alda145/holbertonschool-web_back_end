@@ -5,7 +5,10 @@ export default class Car {
         this._color=color
     }
     cloneCar(){
-
-        return new Car() 
+        // Creates a new object with the correct prototype chain (ParentClass, ChildClass, etc.)
+        const newInstance = Object.create(Object.getPrototypeOf(this));
+        // Copies own enumerable properties from 'this' to the new instance
+        Object.assign(newInstance, this);
+        return newInstance;
     }
 }
